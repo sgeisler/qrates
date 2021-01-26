@@ -10,6 +10,7 @@ mod prepare_builds;
 mod prepare_items;
 mod size;
 mod traits;
+mod trait_impls;
 mod types;
 mod unsafe_block_calls;
 mod unsafe_block_groups;
@@ -56,6 +57,7 @@ pub fn run_query(
         "function-size" => function_size::query(&loader, &report_path.join("function-size")),
         "build-files" => build_files::query(&loader, &report_path.join("build-files")),
         "traits" => traits::query(&loader, &report_path.join("traits")),
+        "trait_impls" => trait_impls::query(&loader, &report_path.join("trait_impls")),
         "types" => types::query(&loader, &report_path.join("types")),
         "unsafe-types" => unsafe_types::query(&loader, &report_path.join("unsafe-types")),
         "unsafe-block-groups" => {
